@@ -1,0 +1,43 @@
+// settings.json
+{
+    "csharp.debug.startupProject": "${workspaceFolder}/backend/backend.csproj",
+    "omnisharp.useModernNet": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/bin": true,
+        "**/obj": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "omnisharp.path": "latest",
+    "csharp.suppressDotnetRestoreNotification": true,
+    "csharp.suppressDotnetInstallNotification": true,
+    "csharp.suppressRestartOmniSharpNotification": true,
+    "dotnet.codeLens.enableReferencesCodeLens": true,
+    "dotnet.codeLens.enableTestsCodeLens": true,
+    "cSpell.words": [
+        "Firstname",
+        "Lastname",
+        "uuidv",
+        "данные",
+        "компонента",
+        "монтировании"
+    ]
+}

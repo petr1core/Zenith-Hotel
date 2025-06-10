@@ -1,0 +1,266 @@
+body {
+    background-color: #0c0f16;
+    color: #e6e6e6;
+}
+
+.reviews p {
+    color: #e5e7eb;
+    font-size: large;
+}
+
+.room-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Заголовок страницы --- */
+.room-page-header {
+    margin-bottom: 24px;
+}
+
+.room-page-header h2 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.header-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.reviews-link {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.reviews-link:hover {
+    color: #63b3ed;
+    text-decoration: underline;
+}
+
+/* --- Основная сетка --- */
+.room-page-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Левая колонка шире правой */
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* --- Галерея --- */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Квадратное изображение */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #16213e;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    border-color: #4a90e2;
+}
+
+.thumbnail.active {
+    border-color: #3182ce;
+    box-shadow: 0 0 10px rgba(49, 130, 206, 0.7);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* --- Правая колонка (Sidebar) --- */
+.sidebar {
+    position: sticky;
+    top: 20px;
+    /* "Прилипает" с отступом сверху */
+}
+
+.booking-box {
+    padding: 24px;
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.book-button {
+    background-color: #0f3460;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #1a4b8c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.room-details {
+    border-top: 1px solid #16213e;
+    padding-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 1rem;
+}
+
+.detail-item .label {
+    color: #a0aec0;
+}
+
+.detail-item .value {
+    color: #e6e6e6;
+    font-weight: 500;
+}
+
+.desc-box {
+    border-top: 1px solid #16213e;
+    padding-top: 20px;
+}
+
+.desc-box h4 {
+    margin: 0 0 10px;
+    color: #e6e6e6;
+    font-size: 1.1rem;
+}
+
+.desc-box p {
+    color: #c0c5ce;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* --- Отзывы --- */
+.reviews {
+    background-color: #1a1a2e;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.reviews h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.write-review-button {
+    background: #0f3460;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.write-review-button:hover {
+    background-color: #1a4b8c;
+}
+
+.review-form-container {
+    margin-top: 24px;
+    padding: 20px;
+    background-color: #16213e;
+    border-radius: 8px;
+    animation: slideDown 0.4s ease-out;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 992px) {
+    .room-page-layout {
+        grid-template-columns: 1fr;
+        /* Одна колонка на планшетах */
+    }
+}
+
+/* Общие классы */
+.loading,
+.error {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #a0aec0;
+}
+
+.error {
+    color: #e53e3e;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

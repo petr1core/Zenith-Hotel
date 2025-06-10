@@ -1,0 +1,101 @@
+.booking-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-page h1,
+.booking-page h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.booking-details,
+.date-selection,
+.options-selection,
+.booking-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.date-pickers {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.date-pickers>div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.date-pickers label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+.date-pickers .react-datepicker-wrapper input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.options-selection .option-item {
+    margin-bottom: 10px;
+}
+
+.options-selection .option-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.booking-summary h2 {
+    text-align: right;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.confirm-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #218838;
+}
+
+.booking-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.error {
+    color: #dc3545;
+}

@@ -1,0 +1,20 @@
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    
+    background-color: #0f172a;
+    /* Тот же цвет для body, html и #root */
+    height: 100%;
+    /* Убедимся, что они занимают всю высоту */
+}
+
+.App {
+    text-align: center;
+    min-height: 100vh;
+    /* background-color: #0f172a; /* Уже установлен на #root */
+    color: #e6e6e6;
+}
+
+/* Остальные стили остаются без изменений */

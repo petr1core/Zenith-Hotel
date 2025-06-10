@@ -1,0 +1,19 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "humps": "^2.0.1",
+    "react-datepicker": "^8.4.0",
+    "uuid": "^11.1.0"
+  }
+}
